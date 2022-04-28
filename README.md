@@ -5,6 +5,7 @@ This repository contains the following files
 - An [Install](./install.sh) Script and
 - An [Uninstall](./uninstall.sh) Script
 - A Docker Compose [Install](./compose.sh) Script
+- A Docker Compose [Uninstall](./compose-uninstall.sh) Script
 
 Feel free to look in the scripts
 
@@ -16,6 +17,7 @@ Make scripts executable with
 chmod +x install.sh
 chmod +x uninstall.sh
 chmod +x compose.sh
+chmod +x compose-uninstall.sh
 ```
 
 Then run the desired script
@@ -25,7 +27,8 @@ Then run the desired script
 ./install.sh ...
 # or that
 ./uninstall.sh ...
-./compose.sh
+./compose.sh ...
+./compose-uninstall.sh ...
 ```
 
 The install script has the following arguments:
@@ -43,11 +46,7 @@ The uninstall script has the following arguments:
 - `--password`: Sudo user password same as in install script above. Ex. `--password="$PASSWORD"`
 - `--remove`: Whether to remove the existing Docker libraries Ex. `--remove=true`
 
-### Compose Install options
+### Compose Install & Uninstall options
 
 - `--password`: Sudo user password same as in install script above. Ex. `--password="$PASSWORD"
 - `--user`: install docker compose for current user or not. Ex. `--user=true`
-
-#### Uninstalling Compose
-
-The script tries to uninstall compose by first searching through the current user home then through the system wide installation.
